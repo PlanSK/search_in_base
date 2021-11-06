@@ -23,7 +23,7 @@ def request_base(phone: str = '', name: str = '', *args) -> list:
             matches.append((row_phone, row_personal_name))
         elif name and name in row_personal_name:
             matches.append((row_phone, row_personal_name))
-
+    get_records = sheet.max_row
     wbook.close()
 
-    return matches
+    return matches, get_records

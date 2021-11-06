@@ -19,7 +19,7 @@
     <div class="login">
       <h1>Данные для поиска</h1>
       <form method="get" action="/">
-        <p><input type="text" name="phone" value="" placeholder="Номер телефона (без 8)"></p>
+        <p><input type="text" name="phone" value="" placeholder="Номер телефона (минимум 6 цифр)"></p>
         <p><input type="text" name="name" value="" placeholder="Фамилия Имя"></p>
         <p class="submit"><input type="submit" name="action" value="search"></p>
       </form>
@@ -51,5 +51,11 @@
     </div>
   </section>
 {% endif %}
+  <section class="container">
+    <div class="login-help">
+      <p>&copy; ESPORTS.TATAR 2021.</p>
+      <p>Records in base: {{get_records}}</p>
+    </div>
+  </section>
 </body>
 </html>
