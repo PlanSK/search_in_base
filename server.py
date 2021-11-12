@@ -7,20 +7,20 @@ app = Flask(__name__)
 
 
 @app.route(
-    "/", methods=["GET"],
+    "/", methods=["GET", "POST"],
 )
 def search():
-    phone_number = request.args.get(
+    phone_number = request.form.get(
         'phone',
         type=str,
         default=''
     )
-    name = request.args.get(
+    name = request.form.get(
         'name',
         type=str,
         default=''
     )
-    action = request.args.get(
+    action = request.form.get(
         'action',
         default=False,
         type=bool
